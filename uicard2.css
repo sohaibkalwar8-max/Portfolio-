@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+}
+
+.top-bar {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #e1e7ef;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 6%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.top-bar h1 {
+    font-size: 21px;
+}
+
+.back-btn {
+    color: #1769e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro {
+    text-align: center;
+    padding: 55px 15px 40px;
+}
+
+.intro span {
+    color: #1769e0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: auto;
+    color: #6d7788;
+    line-height: 1.6;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+.website-card {
+    background: white;
+    border: 1px solid #e1e7ef;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(30, 60, 100, 0.06);
+    transition: 0.3s;
+}
+
+.website-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(30, 60, 100, 0.12);
+}
+
+.card-image {
+    height: 175px;
+    position: relative;
+}
+
+.card-image span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    color: #1769e0;
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Fake visual backgrounds */
+
+.product-image {
+    background: linear-gradient(135deg, #dceeff, #8fc4ff);
+}
+
+.restaurant-image {
+    background: linear-gradient(135deg, #ffe1c7, #ffb277);
+}
+
+.course-image {
+    background: linear-gradient(135deg, #e4ddff, #a995ff);
+}
+
+.property-image {
+    background: linear-gradient(135deg, #d8eee9, #82c7b7);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content small,
+.website-card small {
+    color: #1769e0;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-content h3,
+.website-card h3 {
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.card-content p,
+.website-card p {
+    color: #748094;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-bottom strong {
+    color: #172033;
+}
+
+button {
+    border: none;
+    background: #1769e0;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d55bd;
+}
+
+/* Service */
+
+.service-icon {
+    height: 175px;
+    background: #eaf3ff;
+    color: #1769e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+/* Blog */
+
+.blog-card {
+    min-height: 295px;
+    padding: 25px;
+    background: linear-gradient(135deg, #172033, #30425e);
+    color: white;
+}
+
+.blog-card small {
+    color: #6eb0ff;
+}
+
+.blog-card h3 {
+    font-size: 23px;
+    margin-top: 45px;
+}
+
+.blog-card p {
+    color: #c2ccda;
+}
+
+.blog-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    color: #aeb9c9;
+}
+
+/* Portfolio */
+
+.portfolio-card {
+    padding: 30px 25px;
+}
+
+.portfolio-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #1769e0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Pricing */
+
+.pricing-card {
+    padding: 30px 25px;
+}
+
+.price {
+    display: inline-block;
+    font-size: 38px;
+    margin-top: 15px;
+}
+
+.month {
+    color: #7b8799;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-top: 20px;
+    line-height: 2;
+    color: #5e6b7e;
+}
+
+/* Event */
+
+.event-card {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 295px;
+}
+
+.date-box {
+    min-width: 65px;
+    text-align: center;
+    background: #eaf3ff;
+    padding: 12px 8px;
+    border-radius: 10px;
+    color: #1769e0;
+}
+
+.date-box strong {
+    display: block;
+    font-size: 28px;
+}
+
+.date-box span {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.event-card button {
+    margin-left: auto;
+}
+
+/* Team */
+
+.team-card {
+    padding: 30px;
+    text-align: center;
+}
+
+.team-avatar {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #dceeff;
+    color: #1769e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.team-card > span {
+    color: #1769e0;
+    font-size: 13px;
+}
+
+.team-card p {
+    margin-top: 15px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.socials b {
+    width: 32px;
+    height: 32px;
+    background: #edf3fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Travel */
+
+.travel-card {
+    padding: 25px;
+    background: linear-gradient(145deg, #e9f5ff, white);
+}
+
+.travel-top {
+    display: flex;
+    justify-content: space-between;
+    color: #1769e0;
+    font-size: 12px;
+}
+
+.travel-card h3 {
+    font-size: 25px;
+    margin-top: 55px;
+}
+
+.travel-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    color: #687386;
+}
+
+.travel-bottom strong {
+    color: #172033;
+}
+
+/* News */
+
+.news-card {
+    padding: 30px 25px;
+}
+
+.news-card h3 {
+    font-size: 23px;
+    margin-top: 45px;
+}
+
+.news-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    color: #7b8799;
+}
+
+.news-bottom button {
+    background: transparent;
+    color: #1769e0;
+    padding: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 0 20px;
+    }
+
+    .top-bar h1 {
+        font-size: 17px;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

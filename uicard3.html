@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Design</title>
+    <link rel="stylesheet" href="uicard3.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+    <a href="index.html" class="back-btn">← Back</a>
+    <h1>Interactive Card Design</h1>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <p class="small-title">INTERACTIVE COLLECTION</p>
+        <h2>Interactive Card Designs</h2>
+        <p>
+            A collection of interactive cards with hover effects,
+            animations, buttons, flipping effects and expandable content.
+        </p>
+    </section>
+
+
+    <section class="cards">
+
+        <!-- 1 HOVER CARD -->
+        <div class="card hover-card">
+            <div class="icon">✦</div>
+            <h3>Hover Card</h3>
+            <p>Move your cursor over this card.</p>
+            <span>Hover Effect →</span>
+        </div>
+
+
+        <!-- 2 FLIP CARD -->
+        <div class="card flip-card" tabindex="0">
+
+            <div class="flip-inner">
+
+                <div class="flip-front">
+                    <div class="icon">↻</div>
+                    <h3>Flip Card</h3>
+                    <p>Tap or hover to flip</p>
+                </div>
+
+                <div class="flip-back">
+                    <h3>Back Side</h3>
+                    <p>
+                        Interactive information appears
+                        on the back side.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 EXPAND CARD -->
+        <div class="card expand-card">
+
+            <div class="card-header">
+                <div>
+                    <span class="mini-label">PROJECT</span>
+                    <h3>Web Design</h3>
+                </div>
+
+                <button class="expand-btn">+</button>
+            </div>
+
+            <p class="short-text">
+                Modern responsive website project.
+            </p>
+
+            <div class="extra-content">
+                <p>✓ Responsive Layout</p>
+                <p>✓ Modern UI</p>
+                <p>✓ Interactive Elements</p>
+            </div>
+
+        </div>
+
+
+        <!-- 4 BUTTON INTERACTION -->
+        <div class="card action-card">
+
+            <div class="icon">⚡</div>
+
+            <h3>Action Card</h3>
+
+            <p>
+                Click the button to interact with this card.
+            </p>
+
+            <button class="action-btn">
+                Click Me
+            </button>
+
+            <div class="action-message"></div>
+
+        </div>
+
+
+        <!-- 5 LIKE CARD -->
+        <div class="card like-card">
+
+            <div class="icon">♡</div>
+
+            <h3>Like Card</h3>
+
+            <p>
+                Interactive like button with counter.
+            </p>
+
+            <button class="like-btn">
+                ♡ Like <span>0</span>
+            </button>
+
+        </div>
+
+
+        <!-- 6 IMAGE REVEAL -->
+        <div class="card reveal-card">
+
+            <div class="reveal-image">
+                <span>DESIGN</span>
+            </div>
+
+            <div class="reveal-content">
+                <h3>Reveal Card</h3>
+                <p>
+                    Content reveals itself when you interact
+                    with the card.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 7 TOGGLE CARD -->
+        <div class="card toggle-card">
+
+            <div class="toggle-top">
+                <div>
+                    <span class="mini-label">SETTING</span>
+                    <h3>Dark Mode</h3>
+                </div>
+
+                <button class="toggle-btn">
+                    <span></span>
+                </button>
+            </div>
+
+            <p class="toggle-status">
+                Dark mode is currently off.
+            </p>
+
+        </div>
+
+
+        <!-- 8 PROGRESS CARD -->
+        <div class="card progress-card">
+
+            <div class="progress-top">
+                <div>
+                    <span class="mini-label">PROJECT</span>
+                    <h3>Portfolio</h3>
+                </div>
+
+                <strong>75%</strong>
+            </div>
+
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+
+            <p>Project completion progress</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="uicard3.js"></script>
+
+</body>
+</html>

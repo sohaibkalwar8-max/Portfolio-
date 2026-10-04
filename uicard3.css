@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+.top-bar h1 {
+    font-size: 22px;
+    color: #1769e0;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #1769e0;
+    font-weight: bold;
+}
+
+
+/* MAIN */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 45px;
+}
+
+.small-title {
+    color: #1769e0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.intro > p:last-child {
+    color: #687386;
+    line-height: 1.6;
+}
+
+
+/* GRID */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+
+/* GENERAL CARD */
+
+.card {
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 250px;
+    box-shadow: 0 8px 25px rgba(30, 70, 110, 0.08);
+}
+
+.card h3 {
+    font-size: 23px;
+    margin: 12px 0 8px;
+}
+
+.card p {
+    color: #687386;
+    line-height: 1.5;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: #e8f1ff;
+    color: #1769e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+/* 1 HOVER CARD */
+
+.hover-card {
+    transition: 0.35s;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #1769e0;
+    box-shadow: 0 20px 40px rgba(23, 105, 224, 0.15);
+}
+
+.hover-card span {
+    display: block;
+    margin-top: 25px;
+    color: #1769e0;
+    font-weight: bold;
+}
+
+
+/* 2 FLIP CARD */
+
+.flip-card {
+    padding: 0;
+    min-height: 250px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    perspective: 1000px;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner,
+.flip-card:focus .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    inset: 0;
+    padding: 25px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #e5eaf1;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    background: #1769e0;
+    color: white;
+}
+
+.flip-back p {
+    color: #eaf2ff;
+}
+
+
+/* 3 EXPAND CARD */
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-label {
+    color: #1769e0;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.expand-btn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #e8f1ff;
+    color: #1769e0;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.short-text {
+    margin-top: 12px;
+}
+
+.extra-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.extra-content p {
+    margin-top: 12px;
+}
+
+.expand-card.open .extra-content {
+    max-height: 150px;
+}
+
+.expand-card.open .expand-btn {
+    transform: rotate(45deg);
+}
+
+
+/* 4 ACTION CARD */
+
+.action-card .action-btn {
+    margin-top: 20px;
+}
+
+.action-btn {
+    border: none;
+    background: #1769e0;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.action-btn:hover {
+    background: #0d55bd;
+    transform: scale(1.04);
+}
+
+.action-message {
+    margin-top: 15px;
+    color: #1769e0;
+    font-weight: bold;
+}
+
+
+/* 5 LIKE CARD */
+
+.like-card {
+    text-align: center;
+}
+
+.like-card .icon {
+    margin: auto;
+}
+
+.like-btn {
+    margin-top: 20px;
+    border: 1px solid #dce4ef;
+    background: white;
+    color: #172033;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.like-btn.liked {
+    background: #1769e0;
+    color: white;
+}
+
+
+/* 6 REVEAL CARD */
+
+.reveal-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.reveal-image {
+    height: 150px;
+    background: linear-gradient(
+        135deg,
+        #1769e0,
+        #70aaff
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.reveal-card:hover .reveal-image {
+    height: 110px;
+}
+
+.reveal-content {
+    padding: 20px 25px 25px;
+}
+
+
+/* 7 TOGGLE CARD */
+
+.toggle-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-btn {
+    width: 55px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background: #dce3ed;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    transition: 0.3s;
+}
+
+.toggle-card.active .toggle-btn {
+    background: #1769e0;
+}
+
+.toggle-card.active .toggle-btn span {
+    transform: translateX(25px);
+}
+
+.toggle-status {
+    margin-top: 25px;
+}
+
+
+/* 8 PROGRESS CARD */
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-top strong {
+    color: #1769e0;
+    font-size: 22px;
+}
+
+.progress {
+    height: 10px;
+    background: #e6ebf2;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.progress-fill {
+    width: 75%;
+    height: 100%;
+    background: #1769e0;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.progress-card > p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        padding: 16px 20px;
+    }
+
+    .top-bar h1 {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 230px;
+    }
+
+}
